@@ -1,4 +1,4 @@
-# NuPETI-MonitoresInformativos
+# NuPETI-MonitoresInformativosFadergs
 
 Este trabalho de pesquisa foi constituído através da implementação, na instituição de ensino FADERGS, de múltiplos monitores para melhoria da comunicação entre faculdade e alunos.
 
