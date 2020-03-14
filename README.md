@@ -13,6 +13,8 @@ Utilizado: Raspberry Pi 3<br>
 Linguagens: PHP
 <br>
 
-<b>Atualizações do projeto em andamento:</b> - Implementação no dashboard  opção de exibição de vídeos.<br>
+<b>Atualizações do projeto em andamento:</b> 
+
+- Implementação no dashboard  opção de exibição de vídeos.<br>
 - Implementação script para rodar video no monitor
 
