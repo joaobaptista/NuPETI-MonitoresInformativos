@@ -8,5 +8,6 @@ O projeto implementado, atualmente está presente em cinco andares do campus Ria
 
 A utilização dessa tecnologia permite que a instituição possa comunicar de uma forma mais ativa e melhorando a efetividade dos avisos e possibilitando que o aluno, possa participar através das inscrições para eventos por exemplo, já que terá na porta de sua aula a divulgação.
 
-Utilizado: Raspberry Pi 3
+<br>
+Utilizado: Raspberry Pi 3<br>
 Linguagens: PHP
