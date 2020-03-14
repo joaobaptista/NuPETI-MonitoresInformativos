@@ -10,8 +10,8 @@ A utilização dessa tecnologia permite que a instituição possa comunicar de u
 
 <br>
 
-Utilizado: Raspberry Pi 3<br>
-Linguagens: PHP
+<b>Utilizado:</b> Raspberry Pi 3<br>
+<b>Linguagens: PHP</b>
 
 <br>
 
