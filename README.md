@@ -11,6 +11,6 @@ A utilização dessa tecnologia permite que a instituição possa comunicar de u
 <br>
 Utilizado: Raspberry Pi 3<br>
 Linguagens: PHP
+<br>
 
-
-<b>Atualizações do projeto em andamento:</b><br> - Implementação no dashboard da opção de exibição de vídeos.
+<b>Atualizações do projeto em andamento:</b> - Implementação no dashboard da opção de exibição de vídeos.
