@@ -14,3 +14,9 @@ Linguagens: PHP
 <br>
 
 <b>Atualizações do projeto em andamento:</b> - Implementação no dashboard da opção de exibição de vídeos.
+
+
+<table>
+  <tr>Linguagens</tr>
+   <tr>Plataforma</tr>
+  </table>
