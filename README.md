@@ -18,6 +18,18 @@ A utilização dessa tecnologia permite que a instituição possa comunicar de u
 
 <b>Atualizações do projeto em andamento:</b> 
 
+
+
 - Implementação no dashboard  opção de exibição de vídeos.<br>
+
+Próximas Ações:
 - Implementação script para rodar video no monitor
+
+
+<b>Para configuração:</b>
+
+- Ubuntu 18:04
+- Apache (sudo apt-get install apache2)
+- git clone no diretório /var/www/html
+
 
