@@ -22,7 +22,7 @@ A utilização dessa tecnologia permite que a instituição possa comunicar de u
 
 - Implementação no dashboard  opção de exibição de vídeos.<br>
 
-Próximas Ações:
+<b>Próximas Ações:</B>
 - Implementação script para rodar video no monitor
 
 
