@@ -1,0 +1,111 @@
+Desabilitar desligamento da tela
+https://www.raspberrypi.org/forums/viewtopic.php?t=177715
+
+Usa este comando para editar o ficheiro lightdm.conf
+
+
+sudo nano /etc/lightdm/lightdm.conf
+Adiciona estas duas linhas no ficheiro lightdm.conf
+
+
+[SeatDefaults]
+xserver-command=X -s 0 -dpms
+
+
+---------------------------------------------------------
+
+configurar no openbox para que o gpicview abra em fullscreeen
+
+-----------------------------------------------------------
+
+rodar script slide.sh na inicialização
+
+
+#!/bin/bash
+gpicview --slideshow /var/www/html/imagens/*.*
+
+
+colocar na pasta /script
+
+-------------------------------------------------------
+
+iniciar um script automaticamente após o login
+Abrir o arquivo /etc/profile, com o comando sudo nano /etc/profile.
+
+No final do arquivo insira o comando que irá executar, por exemplo:
+
+gpicview --slideshow /var/www/html/imagens/*.*
+
+Salvar ( <control> O, e saia do nano (<control> X).
+
+Reiniciar o sistema. Após você se logar o programa será executado  automaticamente.
+
+---------------------------------------------------------------
+
+instalar o php
+
+sudo apt-get install php
+
+copiar pasta para /var/www/html
+dar permissao total para o caminho acima
+chmod 777
+
+localhost e abrir php
+
+script deverá pegar os arqivos dessa pasta e executar em modo full
+
+---------------------------------------------------------------
+
+-- Daniel Santos --
+
+Para inicializar automaticamente execute os seguintes passos:
+
+Criar o arquivo "anotherScript.conf" com o seguinte comando: sudo nano /etc/init.d/anotherScript.conf
+Dentro do arquivo digite:
+
+
+#!/bin/bash
+#
+### BEGIN INIT INFO
+# Provides: slide.sh
+# Required-Start: $network
+# Required-Stop: $network
+# Default-Start: 2 3 4 5
+# Default-Stop: 0 1 6
+# Short-Description: Script
+### END INIT INFO
+# chkconfig: 2345 95 20
+ 
+exec /script/slide.sh
+
+
+
+Para tornar o arquivo executável, utilize o seguinte comando:
+
+sudo chmod 755 /etc/init.d/anotherScript.conf
+
+
+Para ativar a inicialização usar o comando:
+
+sudo update-rc.d anotherScript.conf enable
+
+
+Acesse a pasta: cd ~/.config/lxsession/LXDE-pi
+
+Edite o arquivo "autostart" com o comando: sudo nano autostart
+
+Insira a linha: @/etc/init.d/anotherScript.conf
+
+Salvar ( <control> O, e saia do nano (<control> X).
+
+Reinicie o sistema com o comando: sudo reboot
+
+Pronto, o script será executado automaticamente.
+
+
+
+
+
+
+
+
