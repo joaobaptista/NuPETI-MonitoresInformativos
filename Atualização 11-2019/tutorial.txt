@@ -18,7 +18,7 @@ configurar no openbox para que o gpicview abra em fullscreeen
 
 -----------------------------------------------------------
 
-rodar script slide.sh na inicializaÁ„o
+rodar script slide.sh na inicializa√ß√£o
 
 
 #!/bin/bash
@@ -29,30 +29,30 @@ colocar na pasta /script
 
 -------------------------------------------------------
 
-iniciar um script automaticamente apÛs o login
+iniciar um script automaticamente ap√≥s o login
 Abrir o arquivo /etc/profile, com o comando sudo nano /etc/profile.
 
-No final do arquivo insira o comando que ir· executar, por exemplo:
+No final do arquivo insira o comando que ir√° executar, por exemplo:
 
 gpicview --slideshow /var/www/html/imagens/*.*
 
 Salvar ( <control> O, e saia do nano (<control> X).
 
-Reiniciar o sistema. ApÛs vocÍ se logar o programa ser· executado  automaticamente.
+Reiniciar o sistema. Ap√≥s voc√™ se logar o programa ser√° executado  automaticamente.
 
 ---------------------------------------------------------------
 
-instalar o php
+Como instalar o php?
 
-sudo apt-get install php
+No terminal d√™ o comando: sudo apt install php libapache2-mod-php
 
-copiar pasta para /var/www/html
-dar permissao total para o caminho acima
-chmod 777
+copiar pasta com os arquivos html e php para /var/www/html
+
+dar permissao total para o caminho acima com o comando no terminal: chmod 777 
 
 localhost e abrir php
 
-script dever· pegar os arqivos dessa pasta e executar em modo full
+script dever√° pegar os arquivos dessa pasta e executar em modo full
 
 ---------------------------------------------------------------
 
@@ -80,12 +80,12 @@ exec /script/slide.sh
 
 
 
-Para tornar o arquivo execut·vel, utilize o seguinte comando:
+Para tornar o arquivo execut√°vel, utilize o seguinte comando:
 
 sudo chmod 755 /etc/init.d/anotherScript.conf
 
 
-Para ativar a inicializaÁ„o usar o comando:
+Para ativar a inicializa√ß√£o usar o comando:
 
 sudo update-rc.d anotherScript.conf enable
 
@@ -100,7 +100,7 @@ Salvar ( <control> O, e saia do nano (<control> X).
 
 Reinicie o sistema com o comando: sudo reboot
 
-Pronto, o script ser· executado automaticamente.
+Pronto, o script ser√° executado automaticamente.
 
 
 
