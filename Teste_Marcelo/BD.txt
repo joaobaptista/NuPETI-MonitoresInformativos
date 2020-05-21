@@ -1,0 +1,29 @@
+
+/* TABLE BOARDS */
+
+CREATE TABLE `boards` (
+  `idplaca` int(11) NOT NULL,
+  `alias` varchar(45) DEFAULT NULL,
+  `ip_addr` varchar(45) DEFAULT NULL,
+  `fk_location` int(11) NOT NULL,
+  PRIMARY KEY (`idplaca`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+
+/* TABLE LOCATIONS */
+
+CREATE TABLE `locations` (
+  `idlocation` int(11) NOT NULL AUTO_INCREMENT,
+  `alias` varchar(45) DEFAULT NULL,
+  `description` varchar(200) DEFAULT NULL,
+  PRIMARY KEY (`idlocation`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4;
+
+/* TABLE USUÁRIO */
+
+CREATE TABLE `usuario` (
+  `usuario_id` int(11) NOT NULL AUTO_INCREMENT,
+  `usuario` varchar(200) NOT NULL,
+  `senha` varchar(32) NOT NULL,
+  PRIMARY KEY (`usuario_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4;
