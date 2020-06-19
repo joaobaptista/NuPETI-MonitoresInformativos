@@ -1,0 +1,44 @@
+Flask é um pequeno framework web escrito em Python e baseado na biblioteca WSGI Werkzeug e na biblioteca de Jinja2. Flask está disponível sob os termos da Licença BSD. Flask tem a flexibilidade da linguagem de programação Python e provê um modelo simples para desenvolvimento web.
+
+A ideia de usar o Flask no projeto seria de substituir o apache do lado do Raspberry. Assim, criamos um serviço simples e facilmente editável que escuta requisições HTTP e trata de acordo com o programado por nós.
+
+Instalar o Flask para Linux:
+
+$ pip install Flask
+
+Abaixo, o código da aplicação teste:
+----------------------------------------------------------------------------------------------------
+#! /usr/bin/python3
+from flask import Flask
+app = Flask(__name__)
+
+@app.route('/')
+def hello():
+	return "FADERGS - Raspberry PI Server" #Exibe esta mensagem ao ser acessado no navegador
+
+@app.route('/url/<url>', methods = ['GET', 'POST'])
+def urlHandle(url): #Trata o recebimento de uma URL de vídeo do youtube (somente a parte após o '?')
+	file = open("urls/1.txt", "w+")
+	file.write("http://www.youtube.com/watch?"+url+"\n") #Salva a url em um arquivo txt.
+	file.close() #O video sera executado quando o bash for chamado
+	return "URL updated successfully"
+
+if __name__=='__main__':
+	app.run(host='0.0.0.0') #Aceita requisicoes de qualquer ip na rede
+-------------------------------------------------------------------------------------------------------
+
+A porta padrão que o serviço escutará é a 5000. Pode ser acessado pelo navegador deste modo, por exemplo: http://192.168.0.105:5000. A mensagem do método 'hello' será exibida.
+
+Abaixo, o código do script 'video_play.sh'. Este script abre o arquivo "1.txt" (atualizado no método urlHandle da aplicação Flask), lê o link e o passa como parâmetro para ser executado no VLC Plater.
+
+----------------------------------------
+#!/bin/bash
+filename='urls/1.txt'
+url=''
+while read line; do
+	url="$line"
+done < "$filename"
+echo vlc "$url" --fullscreen
+vlc "$url" --fullscreen
+----------------------------------------
+

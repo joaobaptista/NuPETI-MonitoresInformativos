@@ -75,7 +75,8 @@
                                             <th scope="col">Nome</td>
                                             <th scope="col">IP</td>
                                             <th scope="col">Local</td>
-                                            <th scope="col">Info</td>
+                                            <th scope="col">Dados</td>
+                                            <th scope="col">Envio</td>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -92,6 +93,11 @@
                                                    echo "<td>";
                                                         echo "<button type=\"button\" class=\"btn btn-danger\" onclick=\"tableItemClicked('{$row["ip_addr"]}')\">";
                                                         echo "Ver dados";
+                                                        echo "</button>";
+                                                   echo "</td>";
+                                                   echo "<td>";
+                                                        echo "<button type=\"button\" class=\"btn btn-danger\" onclick=\"navigateToUpdatePage('{$row["ip_addr"]}')\">";
+                                                        echo "Enviar dados";
                                                         echo "</button>";
                                                    echo "</td>";
                                                echo "</tr>";
@@ -154,6 +160,9 @@
             div.className = "card";
             div.innerHTML = htmlCode;
             document.getElementById("imageDisplayRow").appendChild(div);
+        }
+        function navigateToUpdatePage(ipAddress) {
+            window.location.href = "envio_imagens.php?ip="+ipAddress;
         }
     </script>
     <!--   Core JS Files   -->
